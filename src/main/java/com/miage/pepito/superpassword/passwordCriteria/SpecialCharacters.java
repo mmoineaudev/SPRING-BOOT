@@ -4,10 +4,10 @@ import com.miage.pepito.superpassword.interfaces.IValidationCriteria;
 
 import java.util.regex.Pattern;
 
-public class PasswordWithOneNumber implements IValidationCriteria {
+public class SpecialCharacters implements IValidationCriteria {
 
     @Override
     public boolean isValid(String password) {
-        return Pattern.compile("/\\d+/").matcher(password).matches();
+        return Pattern.compile("/.*\\W.*/").matcher(password).matches();
     }
 }

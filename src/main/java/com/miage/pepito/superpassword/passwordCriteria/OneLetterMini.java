@@ -1,10 +1,13 @@
 package com.miage.pepito.superpassword.passwordCriteria;
 
+import com.miage.pepito.superpassword.interfaces.IValidationCriteria;
+
 import java.util.regex.Pattern;
 
-public class OneLetterMini {
+public class OneLetterMini implements IValidationCriteria {
 
-    public boolean haveOneLetterMini(String password){
+    @Override
+    public boolean isValid(String password) {
         return Pattern.compile("/.*\\w.*/").matcher(password).matches();
     }
 }
