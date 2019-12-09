@@ -10,7 +10,8 @@ class IValidationCriteriaTest {
     second = new OneLetterMini(),
     third = new PasswordLengthEqualsSix(),
     forth = new PasswordWithOneNumber(),
-    fifth = new SpecialCharacters();
+    fifth = new SpecialCharacters(),
+    sixiemeJeSaisPasLeDireEnAnglais = new IsNull();
     @Test
     void isValid() {
         String lessThanSix = "12aB5";
@@ -45,5 +46,13 @@ class IValidationCriteriaTest {
         assertTrue(! fifth.isValid(moreThanSix));
         assertTrue(! fifth.isValid(moreThanTen));
         assertTrue(fifth.isValid(specChars));
+
+        assertTrue(sixiemeJeSaisPasLeDireEnAnglais.isValid(lessThanSix));
+        assertTrue(sixiemeJeSaisPasLeDireEnAnglais.isValid(moreThanSix));
+        assertTrue(sixiemeJeSaisPasLeDireEnAnglais.isValid(moreThanTen));
+        assertTrue(sixiemeJeSaisPasLeDireEnAnglais.isValid(specChars));
+        assertTrue(! sixiemeJeSaisPasLeDireEnAnglais.isValid(""));
+        assertTrue(! sixiemeJeSaisPasLeDireEnAnglais.isValid(null));
+
     }
 }
