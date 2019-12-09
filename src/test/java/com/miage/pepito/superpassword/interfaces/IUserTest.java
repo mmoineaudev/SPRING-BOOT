@@ -26,6 +26,11 @@ class IUserTest {
             public String getPassword() {
                 return "admin123456";
             }
+
+            @Override
+            public void setAdmin() {
+
+            }
         } ;
         userOne = new IUser() {
             @Override
@@ -41,6 +46,11 @@ class IUserTest {
             @Override
             public String getPassword() {
                 return "userOnePassword";
+            }
+
+            @Override
+            public void setAdmin() {
+
             }
         };
         userTwo = new IUser() {
@@ -60,8 +70,7 @@ class IUserTest {
             }
 
             @Override
-            public boolean setAdmin() {
-                return false;
+            public void setAdmin() {
             }
         };
 
