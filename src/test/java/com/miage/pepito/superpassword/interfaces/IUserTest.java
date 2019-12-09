@@ -58,6 +58,11 @@ class IUserTest {
             public String getPassword() {
                 return "userTwoPassword";
             }
+
+            @Override
+            public boolean setAdmin() {
+                return false;
+            }
         };
 
     }
