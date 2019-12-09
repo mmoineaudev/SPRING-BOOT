@@ -1,5 +1,5 @@
 package com.miage.pepito.superpassword.interfaces;
 
-public interface IvalidationCriteria {
+public interface IValidationCriteria {
     public boolean isValid(String password);
 }
