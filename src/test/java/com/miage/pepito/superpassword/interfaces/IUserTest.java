@@ -67,6 +67,10 @@ class IUserTest {
         assertTrue(userAdmin.isAdmin());
         assertFalse(userOne.isAdmin());
         assertFalse(userTwo.isAdmin());
+        userTwo.setAdmin();
+        assertTrue(userTwo.isAdmin());
+
+
     }
 
     @Test
