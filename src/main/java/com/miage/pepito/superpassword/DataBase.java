@@ -7,13 +7,18 @@ import java.util.ArrayList;
 
 public class DataBase implements IUserManager {
     @Override
-    public void addUser(String id, String password, boolean admin) {
-        ArrayList<String> listeUser= new ArrayList<String>();
-        listeUser.add(id,password,admin);
+    public void addUser(IUser user) {
+        ArrayList<IUser> listUser= new ArrayList<IUser>();
+        listUser.add(user);
     }
 
     @Override
     public IUser getUserByName(String name) {
+        
+//        for(String s : listUser){
+//
+//                System.out.println(s);
+//        }
         return null;
     }
 
