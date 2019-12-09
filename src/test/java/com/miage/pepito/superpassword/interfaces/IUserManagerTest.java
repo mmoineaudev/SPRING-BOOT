@@ -1,12 +1,14 @@
 package com.miage.pepito.superpassword.interfaces;
 
+import com.miage.pepito.superpassword.DataBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class IUserManagerTest {
-    IUserManager userManager;
+    IUserManager userManager= new DataBase();
+
     @BeforeEach
     void addUser() {
         userManager.addUser("Jean", "passwordJean",false);
